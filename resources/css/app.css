@@ -1,0 +1,672 @@
+:root {
+    --primary-color: #e4d4bf;
+    --sec-color: #ff883e;
+}
+body {
+    font-family: "Nexa Text W05 Extra Light";
+}
+.nav-link {
+    color: #fff;
+}
+.nav-link:hover {
+    color: #fff;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #fff;
+}
+.navbar {
+    align-items: flex-end;
+}
+.myicon {
+    padding: 10px;
+    margin-left: 10px;
+}
+.myiconac {
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+.myiconf {
+    padding: 10px;
+    font-size: 36px;
+}
+footer {
+    color: #e4d4bf;
+}
+.mainbutton {
+    padding: 50px;
+    font-size: 40px;
+    background: #ff883e;
+    border-radius: 20px;
+}
+.medbutton {
+    padding: 10px 25px 10px 25px;
+    font-size: 24px;
+    background: #ff883e;
+    border-radius: 10px;
+}
+.mainbutton:hover {
+    background: #ff883e;
+}
+.medbutton:hover {
+    background: #ff883e;
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+    }
+}
+.pmclr {
+    color: #e4d4bf;
+}
+.pmclrbg {
+    background-color: #e4d4bf;
+    color: black;
+}
+.secclr {
+    color: #ff883e;
+}
+.pclr {
+    color: #e4d4bf;
+}
+.product-container {
+    position: relative;
+
+    overflow: hidden; /* Hide overflowing content */
+
+    text-align: center;
+    transition: height 0.3s ease;
+}
+
+.pclr1 {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.read-more-button {
+    position: absolute;
+    bottom: -40px; /* Position the button off-screen initially */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e5d5bf;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: bottom 0.3s ease;
+}
+
+/* Show read-more-button and slide-up effect on hover */
+.product-container:hover .pclr1 {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.product-container:hover .read-more-button {
+    bottom: 10px;
+}
+a {
+    text-decoration: none;
+}
+.whitebg {
+    background-image: url("images/whitebg.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    color: black;
+}
+.border1 {
+}
+.accd a {
+    text-decoration: none;
+    color: #e4d4bf;
+}
+.accd {
+    padding-left: 15px;
+    margin: 15px;
+}
+.navbar {
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    /* height: 100%; */
+    top: 100px;
+    right: 0;
+    z-index: 100;
+    position: fixed;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: transform 0.3s;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Arrange the menu items vertically */
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 105px;
+    left: -300px; /* Initially, the menu is hidden off to the right */
+    background-color: rgba(249, 135, 61, 0.5);
+    height: 100%;
+    width: 300px; /* Set the desired width of the menu */
+    transition: left 0.3s;
+}
+.opbg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.menu li {
+    padding: 26px 20px;
+    font-size: 24px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.close-btn {
+    cursor: pointer;
+    color: #fff;
+    display: none; /* Initially, hide the close button */
+    margin-left: 10px;
+}
+
+.show-menu {
+    left: 0;
+}
+
+.show-menu #content {
+    transform: translateX(200px); /* Adjust the value based on menu width */
+}
+.select-box {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Open Sans", "Helvetica Neue", "Segoe UI", "Calibri", "Arial",
+        sans-serif;
+    font-size: 18px;
+    color: #e4d4bf;
+}
+
+@media (min-width: 768px) {
+    .select-box {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .select-box {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .select-box {
+        width: 100%;
+    }
+}
+
+.select-box__current {
+    position: relative;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+    cursor: pointer;
+    outline: none;
+}
+
+.select-box__current:focus + .select-box__list {
+    opacity: 1;
+    animation-name: none;
+}
+
+.select-box__current:focus .select-box__icon {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.select-box__icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+
+    transition: 0.2s ease;
+    filter: invert(100%);
+}
+
+.select-box__value {
+    display: flex;
+}
+
+.select-box__input {
+    display: none;
+}
+
+.select-box__input:checked + .select-box__input-text {
+    display: block;
+}
+
+.select-box__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    background-color: #000;
+}
+
+.select-box__list {
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+}
+
+.select-box__option {
+    display: block;
+    padding: 15px;
+    background-color: #000;
+}
+
+.select-box__option:hover,
+.select-box__option:focus {
+    color: #546c84;
+    background-color: #e4d4bf;
+}
+
+@keyframes HideList {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }
+}
+.logoimg {
+    max-height: 100px;
+    max-width: 100%;
+}
+
+/*Google Address Search Input*/
+.input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+#map-address-input {
+    padding: 15px;
+    font-size: 16px;
+    background-color: black;
+    color: #e4d4bf;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    width: 100%;
+}
+
+.location-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cstyle%3Esvg%7Bfill:%23e4d48f%7D%3C/style%3E%3Cpath d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* If you want to style the autocomplete dropdown, you can use this CSS */
+.pac-container {
+    background-color: black;
+    color: #e4d4bf;
+    border: none;
+}
+
+.pac-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.pac-item:hover {
+    background-color: #444;
+}
+
+.pac-item-query {
+    font-weight: bold;
+}
+
+.pac-matched {
+    text-decoration: underline;
+}
+.pac-item-query {
+    color: #e4d4bf;
+    font-weight: bold;
+}
+/*Restaurant Lists*/
+.card-list {
+    padding: 30px;
+    margin: 10px;
+    width: 100%;
+    position: relative;
+    max-height: 500px;
+    overflow: hidden; /* Hide the content when collapsed */
+}
+.card-list p {
+    font-size: 20px;
+}
+.card-list-content {
+}
+
+.hidden {
+    max-height: 200px;
+    -webkit-transition: max-height, 0.5s ease;
+    -moz-transition: max-height, 0.5s ease;
+    -ms-transition: max-height, 0.5s ease;
+    -o-transition: max-height, 0.5s ease;
+    transition: max-height, 0.5s ease;
+}
+.hidden-open {
+    max-height: 500px;
+    -webkit-transition: max-height, 0.5s ease;
+    -moz-transition: max-height, 0.5s ease;
+    -ms-transition: max-height, 0.5s ease;
+    -o-transition: max-height, 0.5s ease;
+    transition: max-height, 0.5s ease;
+}
+.icons-list {
+    display: flex;
+    gap: 5px;
+}
+
+.icon-btn {
+    cursor: pointer;
+    position: absolute;
+    font-size: 20px;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    font-size: 52px;
+    padding: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.card-list.active .icon-btn {
+    transform: rotate(180deg); /* Rotate the icon to show "+" when active */
+}
+
+#map {
+    height: 550px;
+    width: 100%;
+}
+.bdbtm {
+    border-bottom: 1px solid var(--primary-color);
+}
+.sushiform input {
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    border-image: none;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px;
+    padding-left: 10px;
+}
+.sushiform label {
+    padding: 10px;
+}
+.sushiform select {
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    border-image: none;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px;
+    padding-left: 10px;
+}
+.sushiform textarea {
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    border-image: none;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px;
+    padding-left: 10px;
+}
+.sushiform input:focus {
+    box-shadow: none;
+    border-image: none;
+    border: none;
+}
+.sushibtn {
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    padding: 10px 20px 10px 20px;
+    font-size: 24px;
+}
+.pad-img {
+    padding: 20px 5px 20px 5px;
+}
+.sushibtn:hover {
+    color: var(--sec-color);
+    background-color: transparent;
+    border: 1px solid var(--sec-color);
+    padding: 10px 20px 10px 20px;
+    font-size: 24px;
+}
+.sushibtn2 {
+    color: var(--sec-color);
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+}
+.bgprod {
+    position: relative;
+    background-image: url("images/fond_bg.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+}
+.bgprod2 {
+    position: relative;
+    background-image: url("images/fond_bg.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 140px;
+}
+.bgprod::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* Adjust the opacity here (0.5 means 50% opacity) */
+}
+.prodcat {
+    width: 100%;
+    height: 100%;
+    color: var(--sec-color);
+    background-image: url("images/products/entrees-et-accompagnements/accompagnements/riz-nature.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prodcatop {
+    width: 100%;
+    height: 100%;
+    color: var(--sec-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-word;
+}
+.prodcatop h4 {
+    font-weight: bold;
+}
+
+.borderprodcat {
+    border: 1px solid var(--sec-color);
+}
+
+.botbg {
+    background: url("images/bottombg.jpg");
+    background-positon: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.topbg {
+    background: url("images/bgindex2.png");
+    width: 100%;
+    background-positon: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.h200 {
+    height: 200px;
+    width: 200px;
+}
+/*Add to Cart page */
+.pricetag {
+    display: flex;
+    flex-direction: row;
+}
+#sidept3 {
+    padding: 5px;
+    height: 100%;
+    display: flex;
+}
+.sidept {
+    background-color: transparent;
+
+    height: 100%;
+}
+.centerinput {
+    width: 50px;
+    color: #fff;
+}
+.centerinput input {
+    width: 50px;
+    height: 100%;
+    padding-left: 20px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+.pbtn {
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 0px;
+    color: #fff;
+}
+.pbtn:hover {
+    background-color: transparent;
+}
+.subcart {
+    padding: 5px;
+    border: 1px solid var(--sec-color);
+    height: 150px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.subcart2 {
+    padding: 5px;
+    border: 1px solid var(--sec-color);
+    height: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.seccolr {
+    color: var(--sec-color);
+}
+.collage-img {
+    height: 100%;
+    object-fit: cover;
+}
+.myiconf svg {
+    fill: var(--sec-color);
+}
+#content {
+    width: 100%;
+}
+.bg-div {
+    /* Set the background image */
+    background-image: url("images/bg3.png");
+    /* Make the background image repeat only along the x-axis (horizontally) */
+    background-repeat: repeat;
+    /* Set the width and height to 100% to cover the full content */
+    width: 100%;
+    height: 100%;
+    /* Make the background image cover the full width and height of the div */
+    background-size: 100% auto;
+}
+
+.bg-div2 {
+    background: rgb(255, 98, 0);
+    background: -moz-linear-gradient(
+        90deg,
+        rgba(255, 98, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 13%
+    );
+    background: -webkit-linear-gradient(
+        90deg,
+        rgba(255, 98, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 13%
+    );
+    background: linear-gradient(
+        90deg,
+        rgba(255, 98, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 13%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff6200",endColorstr="#000000",GradientType=1);
+}
